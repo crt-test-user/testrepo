@@ -1,3 +1,9 @@
+*** Settings ***
+Library                         QForce
+
+*** Variables ***
+${BROWSER}                      chrome
+
 *** Keywords ***
 Login to SF
     [Documentation]             Login to Salesforce instance.
