@@ -1,0 +1,37 @@
+defaults:
+  provider: lambdatest
+  device: cloud_android
+  session: cloud_test
+  EXECDIR: ~
+  ltUserName: ~
+  ltPassWord: ~
+  name: Platform Tests
+  project: Platform Tests
+  build: Platform Tests
+  appCustomId: proverbial_android
+
+providers:
+  - provider: lambdatest, lt
+    username: $ltUserName
+    apikey: $ltPassWord
+    capabilities:
+      remote_url: https://$username:$apikey@mobile-hub.lambdatest.com/wd/hub
+      projectName: $project
+      buildName: $build
+
+devices:
+  - device: cloud_android
+    capabilities:
+      platform: android
+      deviceName: $bsDevice
+      automationName: UIAutomator2
+      noReset: true
+      fullReset: false
+sessions:
+    - session: cloud_test
+      capabilities:
+          app: $appCustomId
+          sessionName: $name
+          newCommandTimeout: 180
+
+
