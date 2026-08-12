@@ -1,0 +1,30 @@
+defaults:
+  provider: browserstack
+  device: crt_configured
+  session: apidemos
+  bsUserName: ~
+  bsPassWord: ~
+  bsDevice: ~
+  bsProject: CRT-Tests
+  bsName: Mobile Robot Android Tests
+  bsBuild: CRT Test Interfaces Squad
+providers:
+  - provider: browserstack, bs
+    capabilities:
+      remote_url: https://$bsUserName:$bsPassWord@hub-cloud.browserstack.com/wd/hub
+      browserstack.appium_version: '1.22.0'
+devices:
+  - device: crt_configured
+    capabilities:
+      deviceName: $bsDevice
+      device: $bsDevice
+      platform: android
+      automationName: UIAutomator2
+      autoGrantPermissions: true
+sessions:
+  - session: apidemos
+    capabilities:
+      app: TestAppForCRT
+      sessionName: $bsName
+      build: $bsBuild
+      project: $bsProject

@@ -1,0 +1,37 @@
+defaults:
+  provider: lambdatest
+  device: cloud_ios
+  session: cloud_test
+  EXECDIR: ~
+  ltUserName: ~
+  ltPassWord: ~
+  bsDevice: ~
+  name: Platform Tests
+  project: Platform Tests
+  build: Platform Tests
+  appCustomId: proverbial_ios
+
+providers:
+  - provider: lambdatest, lt
+    username: $ltUserName
+    apikey: $ltPassWord
+    capabilities:
+      remote_url: https://$username:$apikey@mobile-hub.lambdatest.com/wd/hub
+      projectName: $project
+      buildName: $build
+
+devices:
+  - device: cloud_ios
+    capabilities:
+      platform: ios
+      deviceName: $bsDevice
+      automationName: XCUITest
+sessions:
+    - session: cloud_test
+      capabilities:
+          app: $appCustomId
+          sessionName: $name
+          newCommandTimeout: 180
+
+
+    
