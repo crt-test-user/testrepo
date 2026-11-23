@@ -7,7 +7,7 @@ ${BROWSER}                      chrome
 *** Keywords ***
 Login to SF
     [Documentation]             Login to Salesforce instance.
-    [Arguments]                 ${BROWSER}
+    #[Arguments]                 ${BROWSER}
     Set Library Search Order    QForce                      QWeb
    # Open Browser                about:blank                 ${BROWSER}
     GoTo                        ${login_url}
