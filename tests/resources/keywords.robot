@@ -16,7 +16,6 @@ Login to SF
     ClickText                   Log In with Username
     TypeText                    Username                    ${SF_USERNAME_RECORDER}     delay=1
     ClickText                   Log In
-    Sleep                       2s
     TypeSecret                  Password                    ${SF_PASSWORD_RECORDER}
     ClickText                   Log In
     ${OTP}                      GetOTP                      ${SF_USERNAME_RECORDER}     ${SF_MFA_SECRET_RECORDER}
