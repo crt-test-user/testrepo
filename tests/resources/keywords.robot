@@ -3,7 +3,7 @@ Library                         QForce
 
 *** Variables ***
 ${BROWSER}                      chrome
-${SF_Url}                       https://login.salesforce.com/
+
 *** Keywords ***
 Login to SF
     [Documentation]             Login to Salesforce instance.
