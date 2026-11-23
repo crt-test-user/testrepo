@@ -10,3 +10,4 @@ Suite Teardown                  CloseAllBrowsers
 
 *** Test Cases ***
 Test
+    Login to SF
