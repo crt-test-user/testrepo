@@ -10,7 +10,7 @@ Login to SF
     #[Arguments]                 ${BROWSER}
     Set Library Search Order    QForce                      QWeb
    # Open Browser                about:blank                 ${BROWSER}
-    GoTo                        ${login_url}
+    GoTo                        login.salesforce.com
     TypeText                    Username                    ${SF_USERNAME_RECORDER}     delay=1
     ClickText                   Log In
     Sleep                       2s
