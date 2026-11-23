@@ -9,7 +9,7 @@ Login to SF
     [Documentation]             Login to Salesforce instance.
     [Arguments]                 ${BROWSER}
     Set Library Search Order    QForce                      QWeb
-    Open Browser                about:blank                 ${BROWSER}
+   # Open Browser                about:blank                 ${BROWSER}
     GoTo                        ${login_url}
     TypeText                    Username                    ${SF_USERNAME_RECORDER}     delay=1
     ClickText                   Log In
