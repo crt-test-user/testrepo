@@ -10,6 +10,7 @@ Login to SF
     #[Arguments]                 ${BROWSER}
     Set Library Search Order    QForce                      QWeb
    # Open Browser                about:blank                 ${BROWSER}
+    SetConfig                   Delay          2s
     GoTo                        https://login.salesforce.com/
     VerifyText                  Log In with Email
     ClickText                   Log In with Username
