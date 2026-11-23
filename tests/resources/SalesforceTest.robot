@@ -4,7 +4,7 @@
 *** Settings ***
 Library                         QForce
 Resource                        keywords.robot
-Suite Setup                     Login to SF    chrome
+Suite Setup                      Open Browser        about:blank    chrome
 Suite Teardown                  CloseAllBrowsers
             
 
